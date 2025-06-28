@@ -1,0 +1,12 @@
+﻿using Ftec.ProjetosWeb.Social.Dominio.Entidades;
+
+namespace Ftec.ProjetosWeb.Social.Dominio.Repositorio
+{
+    public interface IStoryRepository
+    {
+        void PostStoryAsync(Guid idUsuario, string imagemBase64);
+        void DeleteStoryAsync(Guid storyId);
+        //Task<List<User>> ListarUsuariosComStorysRecentesAsync();
+        List<Story> ListarStorysUsuario(Guid idUsuario);
+    }
+}
