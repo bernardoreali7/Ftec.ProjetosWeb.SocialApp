@@ -1,0 +1,342 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - FTEC Social</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+        }
+
+        .sidebar {
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+        }
+
+        .sidebar-item {
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+        }
+        .sidebar-item:hover {
+                background-color: #3b82f6;
+        }
+
+        .story-ring {
+            border: 3px solid #3b82f6;
+            padding: 2px;
+        }
+        .post-image {
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        .btn-primary {
+            background-color: #3b82f6;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #cbd5e1;
+        }
+        .tab-item {
+            position: relative;
+        }
+        .tab-item.active:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #3b82f6;
+        }
+
+        .bg-dark {
+            background: #1f1f1f;
+            background: #1f1f1f;
+        }
+
+        .c-white {
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-dark flex h-screen">
+    <!-- Sidebar -->
+    <div class="sidebar w-64 bg-dark shadow-md">
+        <div class="brand-logo mb-8">
+            <h1 class="text-4xl font-bold gradient-text">Space FTEC</h1>
+        </div>
+        <nav class="sidebar-nav p-2">
+            <a href="/social/home" class="sidebar-item active flex items-center p-3 rounded-lg mb-1">
+                <i class="fas fa-home mr-3"></i>
+                <span>Home</span>
+            </a>
+            <a href="/social/pesquisar" class="sidebar-item flex items-center p-3 rounded-lg mb-1">
+                <i class="fas fa-search mr-3"></i>
+                <span>Pesquisar</span>
+            </a>
+            <a href="/social/criar" class="sidebar-item flex items-center p-3 rounded-lg mb-1">
+                <i class="fas fa-plus-circle mr-3"></i>
+                <span>Criar</span>
+            </a>
+            <a href="/social/perfil" class="sidebar-item flex items-center p-3 rounded-lg mb-1">
+                <i class="fas fa-user mr-3"></i>
+                <span>Perfil</span>
+            </a>
+            <a href="/social/configuracoes" class="sidebar-item flex items-center p-3 rounded-lg mb-1">
+                <i class="fas fa-cog mr-3"></i>
+                <span>Configurações</span>
+            </a>
+
+        </nav>
+        <div class="p-4 border-t border-gray-200">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="font-semibold">Fernando Reinaldo</p>
+                    <p class="text-xs text-gray-500">@@fernando.reinaldo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile header -->
+    <div class="md:hidden fixed top-0 left-0 right-0 bg-white shadow-sm p-4 flex justify-between items-center z-10">
+        <div class="flex items-center">
+            <h1 class="font-bold text-blue-500">FTEC Social</h1>
+        </div>
+        <div class="w-8 h-8 rounded-full flex items-center justify-center text-gray-500 font-bold">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+    </div>
+
+    <!-- Mobile bottom navigation -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around items-center py-3 z-10">
+        <a href="/social/home" class="text-2xl text-gray-500">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="/social/pesquisar" class="text-2xl text-gray-500">
+            <i class="fas fa-search"></i>
+        </a>
+        <a href="/social/criar" class="text-2xl text-gray-500">
+            <i class="fas fa-plus-square"></i>
+        </a>
+        <a href="/social/perfil" class="text-2xl text-gray-500">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="/social/configuracoes" class="text-2xl text-gray-500">
+            <i class="fas fa-cog"></i>
+        </a>
+    </div>
+
+    <!-- Main content -->
+    <div class="flex-1 overflow-y-auto pt-16 md:pt-0">
+        <div class="max-w-4xl mx-auto">
+            <!-- Profile header -->
+            <div class="c-white bg-black shadow-sm mb-6">
+                <div class="p-6">
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                        <!-- Profile picture with story ring -->
+                        <div class="story-ring rounded-full">
+                            <img src="https://picsum.photos/200/200?random=1" alt="Foto de perfil" class="w-32 h-32 rounded-full object-cover">
+                        </div>
+
+                        <div class="flex-1 w-full">
+                            <!-- Profile info -->
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <div class="mb-4 md:mb-0">
+                                    <h1 class="text-2xl font-bold">Fernando Reinaldo</h1>
+                                    <p class="">@@fernando.reinaldo</p>
+                                </div>
+                                <div class="flex gap-3">
+                                    <button class="btn-secondary text-gray-700 px-4 py-2 rounded-lg text-sm font-medium">
+                                        <i class="fas fa-cog mr-2"></i> Editar Perfil
+                                    </button>
+                                    <button class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">
+                                        <i class="fas fa-plus mr-2"></i> Seguir
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Bio -->
+                            <p class="mb-4">
+                                Desenvolvedor | Último semestre de Análise e Desenvolvimento de Sistemas
+                            </p>
+
+                            <!-- Stats -->
+                            <div class="flex gap-6 text-center md:text-left">
+                                <div>
+                                    <span class="font-bold">6</span>
+                                    <span class="ml-1">publicações</span>
+                                </div>
+                                <div>
+                                    <span class="font-bold">2.5k</span>
+                                    <span class="ml-1">seguidores</span>
+                                </div>
+                                <div>
+                                    <span class="font-bold">2k</span>
+                                    <span class="ml-1">seguindo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <div class="border-t border-gray-200">
+                    <div class="flex justify-center md:justify-start">
+                        <a href="#" class="tab-item active px-6 py-4 font-medium">
+                            <i class="fas fa-th-large mr-2"></i> Publicações
+                        </a>
+                        <a href="#" class="tab-item px-6 py-4">
+                            <i class="fas fa-bookmark mr-2"></i> Salvos
+                        </a>
+                        <a href="#" class="tab-item px-6 py-4">
+                            <i class="fas fa-tag mr-2"></i> Marcados
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Posts grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1">
+                <!-- Sample posts -->
+                <div class="relative group">
+                    <img src="https://picsum.photos/200/200?random=2" alt="Post" class="w-full post-image">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="text-white flex items-center mr-4">
+                            <i class="fas fa-heart mr-1"></i>
+                            <span>100</span>
+                        </div>
+                        <div class="text-white flex items-center">
+                            <i class="fas fa-comment mr-1"></i>
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://picsum.photos/200/200?random=3" alt="Post" class="w-full post-image">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="text-white flex items-center mr-4">
+                            <i class="fas fa-heart mr-1"></i>
+                            <span>999</span>
+                        </div>
+                        <div class="text-white flex items-center">
+                            <i class="fas fa-comment mr-1"></i>
+                            <span>45</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://picsum.photos/200/200?random=4" alt="Post" class="w-full post-image">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="text-white flex items-center mr-4">
+                            <i class="fas fa-heart mr-1"></i>
+                            <span>1.2k</span>
+                        </div>
+                        <div class="text-white flex items-center">
+                            <i class="fas fa-comment mr-1"></i>
+                            <span>664</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://picsum.photos/200/200?random=5" alt="Post" class="w-full post-image">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="text-white flex items-center mr-4">
+                            <i class="fas fa-heart mr-1"></i>
+                            <span>76</span>
+                        </div>
+                        <div class="text-white flex items-center">
+                            <i class="fas fa-comment mr-1"></i>
+                            <span>8</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://picsum.photos/200/200?random=6" alt="Post" class="w-full post-image">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="text-white flex items-center mr-4">
+                            <i class="fas fa-heart mr-1"></i>
+                            <span>885</span>
+                        </div>
+                        <div class="text-white flex items-center">
+                            <i class="fas fa-comment mr-1"></i>
+                            <span>214</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://picsum.photos/200/200?random=7" alt="Post" class="w-full post-image">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div class="text-white flex items-center mr-4">
+                            <i class="fas fa-heart mr-1"></i>
+                            <span>123</span>
+                        </div>
+                        <div class="text-white flex items-center">
+                            <i class="fas fa-comment mr-1"></i>
+                            <span>12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Menu toggle for mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileSidebar.classList.remove('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileSidebar.classList.add('hidden');
+        });
+
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.tab-item');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                tabs.forEach(t => t.classList.remove('active', 'text-gray-800'));
+                tabs.forEach(t => t.classList.add('text-gray-600'));
+                tab.classList.add('active', 'text-gray-800');
+                tab.classList.remove('text-gray-600');
+                // Here you would typically load different content based on the tab
+            });
+        });
+    </script>
+</body>
+</html>

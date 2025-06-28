@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ftec.ProjetosWeb.Social", "Ftec.ProjetosWeb.Social\Ftec.ProjetosWeb.Social.csproj", "{89CE6554-F037-466C-937C-260C5C19ACA6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacao", "Aplicacao", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ftec.ProjetosWeb.Social.Aplicacao", "Ftec.ProjetosWeb.Social.Aplicacao\Ftec.ProjetosWeb.Social.Aplicacao.csproj", "{EFC70000-CB0F-4604-87BB-60C87335FE39}"
@@ -17,9 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servicos", "Servicos", "{AB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ftec.ProjetosWeb.Social.Dominio", "Ftec.ProjetosWeb.Social.Dominio\Ftec.ProjetosWeb.Social.Dominio.csproj", "{B99F2759-5052-4E43-BBF8-378048BD935C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ftec.ProjetosWeb.Social.Repositorio", "Ftec.ProjetosWeb.CadCliente.Repositorio\Ftec.ProjetosWeb.Social.Repositorio.csproj", "{157A3E9C-B512-4D75-855E-433D0A00308F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio.Test", "Repositorio.Test\Repositorio.Test.csproj", "{D09DB39F-4386-4DFC-901A-CCC7C807021C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ftec.ProjetosWeb.Social.Repositorio", "Ftec.ProjetosWeb.Social.Repositorio\Ftec.ProjetosWeb.Social.Repositorio.csproj", "{4DD9D487-531E-4489-971F-4B80564EA6F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Apresentacao", "_Apresentacao", "{F9F36646-04BF-48D0-8E96-9354678AB4BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ftec.ProjetosWeb.Social.API", "Ftec.ProjetosWeb.Social.API\Ftec.ProjetosWeb.Social.API.csproj", "{B3D49BB4-D23D-41CA-B52C-75F228AD8EFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{E4D91BE3-7C1C-439D-B31D-2B3A8AD40580}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{89CE6554-F037-466C-937C-260C5C19ACA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{89CE6554-F037-466C-937C-260C5C19ACA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{89CE6554-F037-466C-937C-260C5C19ACA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{89CE6554-F037-466C-937C-260C5C19ACA6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EFC70000-CB0F-4604-87BB-60C87335FE39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EFC70000-CB0F-4604-87BB-60C87335FE39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFC70000-CB0F-4604-87BB-60C87335FE39}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,24 +39,33 @@ Global
 		{B99F2759-5052-4E43-BBF8-378048BD935C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B99F2759-5052-4E43-BBF8-378048BD935C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B99F2759-5052-4E43-BBF8-378048BD935C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{157A3E9C-B512-4D75-855E-433D0A00308F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{157A3E9C-B512-4D75-855E-433D0A00308F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{157A3E9C-B512-4D75-855E-433D0A00308F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{157A3E9C-B512-4D75-855E-433D0A00308F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D09DB39F-4386-4DFC-901A-CCC7C807021C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D09DB39F-4386-4DFC-901A-CCC7C807021C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D09DB39F-4386-4DFC-901A-CCC7C807021C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D09DB39F-4386-4DFC-901A-CCC7C807021C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD9D487-531E-4489-971F-4B80564EA6F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD9D487-531E-4489-971F-4B80564EA6F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD9D487-531E-4489-971F-4B80564EA6F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD9D487-531E-4489-971F-4B80564EA6F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3D49BB4-D23D-41CA-B52C-75F228AD8EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D49BB4-D23D-41CA-B52C-75F228AD8EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D49BB4-D23D-41CA-B52C-75F228AD8EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D49BB4-D23D-41CA-B52C-75F228AD8EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D91BE3-7C1C-439D-B31D-2B3A8AD40580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D91BE3-7C1C-439D-B31D-2B3A8AD40580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D91BE3-7C1C-439D-B31D-2B3A8AD40580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D91BE3-7C1C-439D-B31D-2B3A8AD40580}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{89CE6554-F037-466C-937C-260C5C19ACA6} = {ABB8AC1B-925A-4DC1-964C-BBA2CCF93074}
 		{EFC70000-CB0F-4604-87BB-60C87335FE39} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{B99F2759-5052-4E43-BBF8-378048BD935C} = {8D649C7A-3E3A-4CDC-BB1F-8B144D6E9375}
-		{157A3E9C-B512-4D75-855E-433D0A00308F} = {0A0F3C85-E063-4EDE-96BC-BC5A48601688}
 		{D09DB39F-4386-4DFC-901A-CCC7C807021C} = {0A0F3C85-E063-4EDE-96BC-BC5A48601688}
+		{4DD9D487-531E-4489-971F-4B80564EA6F3} = {0A0F3C85-E063-4EDE-96BC-BC5A48601688}
+		{B3D49BB4-D23D-41CA-B52C-75F228AD8EFE} = {ABB8AC1B-925A-4DC1-964C-BBA2CCF93074}
+		{E4D91BE3-7C1C-439D-B31D-2B3A8AD40580} = {F9F36646-04BF-48D0-8E96-9354678AB4BA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8652E516-B4BC-44B7-8D70-2957B4B6FCE6}

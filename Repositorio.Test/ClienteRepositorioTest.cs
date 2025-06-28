@@ -9,7 +9,7 @@ namespace Repositorio.Test
         [TestMethod]
         public void InserirTeste()
         {
-            var cliente = new Cliente();
+            var cliente = new Story();
             var clienteRepositorio = new ClienteRepositorio();
             try
             {
@@ -30,7 +30,7 @@ namespace Repositorio.Test
         [TestMethod]
         public void ExcluirTeste()
         {
-            var cliente = new Cliente();
+            var cliente = new Story();
             var clienteRepositorio = new ClienteRepositorio();
             try
             {
@@ -54,7 +54,7 @@ namespace Repositorio.Test
         [TestMethod]
         public void ProcurarTeste()
         {
-            var cliente = new Cliente();
+            var cliente = new Story();
             var clienteRepositorio = new ClienteRepositorio();
             try
             {
@@ -92,7 +92,7 @@ namespace Repositorio.Test
         [TestMethod]
         public void AlterarTeste()
         {
-            var cliente = new Cliente()
+            var cliente = new Story()
             {
                 Cpf = "123",
                 RazaoSocial = "Juliano",
