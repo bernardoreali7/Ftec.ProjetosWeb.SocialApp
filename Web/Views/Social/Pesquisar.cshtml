@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesquisar - FTEC Social</title>
+    <title>Space FTEC - Pesquisar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -35,6 +35,11 @@
         .sidebar-item:hover {
                 background-color: #3b82f6;
         }
+
+        .sidebar-logo {
+            color: white;
+        }
+
         .search-result:hover {
             background-color: #3b82f6;
         }
@@ -65,7 +70,7 @@
     <!-- Sidebar -->
     <div class="sidebar w-64 bg-dark shadow-md">
         <div class="brand-logo mb-8">
-            <h1 class="text-4xl font-bold gradient-text">Space FTEC</h1>
+            <h1 class="sidebar-logo text-4xl font-bold gradient-text">Space FTEC</h1>
         </div>
         <nav class="sidebar-nav p-2">
             <a href="/social/home" class="sidebar-item active flex items-center p-3 rounded-lg mb-1">
@@ -96,7 +101,7 @@
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="ml-3">
-                    <p class="font-semibold">Fernando Reinaldo</p>
+                    <p class="c-white font-semibold">Fernando Reinaldo</p>
                     <p class="text-xs text-gray-500">@@fernando.reinaldo</p>
                 </div>
             </div>
@@ -134,9 +139,9 @@
 
     <!-- Main content -->
     <div class="flex-1 overflow-y-auto pt-16 md:pt-0">
-        <div class="max-w-4xl mx-auto p-4">
+        <div class="bg-black rounded-lg mt-5 max-w-4xl mx-auto p-4">
             <!-- Search bar -->
-            <div class="bg-dark rounded-lg shadow-sm p-4 mb-6 sticky top-16 md:top-0 z-10">
+            <div class="bg-black rounded-lg shadow-sm p-4 mb-6 sticky top-16 md:top-0 z-10">
                 <div class="relative">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <i class="fas fa-search text-gray-400"></i>
@@ -165,7 +170,7 @@
                     <div class="search-result flex items-center justify-between p-3 rounded-lg cursor-pointer">
                         <div class="flex items-center">
                             <i class="fas fa-search text-gray-400 mr-3"></i>
-                            <span class="font-medium">#ftec</span>
+                            <span class="font-medium">#ads</span>
                         </div>
                         <button class="text-gray-400 hover:text-gray-600">
                             <i class="fas fa-times"></i>
@@ -176,7 +181,7 @@
                             <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">
                                 <i class="fas fa-user"></i>
                             </div>
-                            <span class="font-medium">@@joaosilva</span>
+                            <span class="font-medium">@@bernardo.reali</span>
                         </div>
                         <button class="text-gray-400 hover:text-gray-600">
                             <i class="fas fa-times"></i>
@@ -185,7 +190,7 @@
                     <div class="search-result flex items-center justify-between p-3 rounded-lg cursor-pointer">
                         <div class="flex items-center">
                             <i class="fas fa-search text-gray-400 mr-3"></i>
-                            <span class="font-medium">#programação</span>
+                            <span class="font-medium">#formatura</span>
                         </div>
                         <button class="text-gray-400 hover:text-gray-600">
                             <i class="fas fa-times"></i>
@@ -250,7 +255,7 @@
                             <div class="flex items-center">
                                 <i class="fas fa-hashtag text-blue-500 text-xl mr-3"></i>
                                 <div>
-                                    <p class="font-medium">#programação</p>
+                                    <p class="font-medium">#formatura</p>
                                     <p class="text-sm text-gray-500">5.678 publicações</p>
                                 </div>
                             </div>
