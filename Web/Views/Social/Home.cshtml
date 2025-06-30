@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - FTEC Social</title>
+    <title>Social FTEC - Início</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -79,7 +79,7 @@
         }
 
         .post-right {
-            height:553px;
+            height:536px;
             color: black;
             background: #3b82f6;
             display: flex;
@@ -105,6 +105,12 @@
                 flex-direction:column;
                 justify-content: center;
                 gap: 15px;
+        }
+
+        .action-infos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .btn-primary {
@@ -136,10 +142,15 @@
         }
         .bg-dark {
             background: #1f1f1f;
-            background: #1f1f1f;
         }
         .time{
             width:100%;
+        }
+        .c-white {
+            color: white;
+        }
+        .bg-blue {
+            background: #3b82f6;
         }
     </style>
 </head>
@@ -152,7 +163,7 @@
         <nav class="sidebar-nav p-2">
             <a href="/social/home" class="sidebar-item active flex items-center p-3 rounded-lg mb-1">
                 <i class="fas fa-home mr-3"></i>
-                <span>Home</span>
+                <span>Início</span>
             </a>
             <a href="/social/pesquisar" class="sidebar-item flex items-center p-3 rounded-lg mb-1">
                 <i class="fas fa-search mr-3"></i>
@@ -178,7 +189,7 @@
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="ml-3">
-                    <p class="font-semibold">Fernando Reinaldo</p>
+                    <p class="c-white font-semibold">Fernando Reinaldo</p>
                     <p class="text-xs text-gray-500">@@fernando.reinaldo</p>
                 </div>
             </div>
@@ -221,7 +232,7 @@
             <div class="bg-dark rounded-lg shadow-sm p-4 mb-6">
                 <div class="flex space-x-4 overflow-x-auto pb-2 scrollbar-hide">
                     <!-- Your story -->
-                    <div class="flex flex-col items-center space-y-1">
+                    <div class="c-white flex flex-col items-center space-y-1">
                         <div class="relative">
                             <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                                 <img src="https://picsum.photos/200/200?random=1" alt="Your story" class="w-full h-full object-cover">
@@ -234,50 +245,87 @@
                     </div>
 
                     <!-- Friends stories -->
-                    <div class="flex flex-col items-center space-y-1">
+                    <div class="c-white flex flex-col items-center space-y-1">
                         <div class="story-item relative">
-                            <div class="w-16 h-16 rounded-full bg-white p-0.5 flex items-center justify-center overflow-hidden">
+                            <div class="w-16 h-16 rounded-full bg-blue p-0.5 flex items-center justify-center overflow-hidden">
                                 <img src="https://picsum.photos/200/200?random=2" alt="Friend story" class="w-full h-full object-cover rounded-full">
                             </div>
                         </div>
-                        <span class="text-xs truncate w-16 text-center">maria</span>
+                        <span class="text-xs truncate w-16 text-center">bernardo</span>
                     </div>
 
-                    <div class="flex flex-col items-center space-y-1">
+                    <div class="c-white flex flex-col items-center space-y-1">
                         <div class="story-item active relative">
-                            <div class="w-16 h-16 rounded-full bg-white p-0.5 flex items-center justify-center overflow-hidden">
+                            <div class="w-16 h-16 rounded-full bg-blue p-0.5 flex items-center justify-center overflow-hidden">
                                 <img src="https://picsum.photos/200/200?random=3" alt="Friend story" class="w-full h-full object-cover rounded-full">
                             </div>
                         </div>
-                        <span class="text-xs truncate w-16 text-center">carlos</span>
+                        <span class="text-xs truncate w-16 text-center">juliano</span>
                     </div>
 
-                    <div class="flex flex-col items-center space-y-1">
+                    <div class="c-white flex flex-col items-center space-y-1">
                         <div class="story-item relative">
-                            <div class="w-16 h-16 rounded-full bg-white p-0.5 flex items-center justify-center overflow-hidden">
+                            <div class="w-16 h-16 rounded-full bg-blue p-0.5 flex items-center justify-center overflow-hidden">
                                 <img src="https://picsum.photos/200/200?random=4" alt="Friend story" class="w-full h-full object-cover rounded-full">
                             </div>
                         </div>
-                        <span class="text-xs truncate w-16 text-center">ana</span>
+                        <span class="text-xs truncate w-16 text-center">milena</span>
                     </div>
 
-                    <div class="flex flex-col items-center space-y-1">
+                    <div class="c-white flex flex-col items-center space-y-1">
                         <div class="story-item relative">
-                            <div class="w-16 h-16 rounded-full bg-white p-0.5 flex items-center justify-center overflow-hidden">
+                            <div class="w-16 h-16 rounded-full bg-blue p-0.5 flex items-center justify-center overflow-hidden">
                                 <img src="https://picsum.photos/200/200?random=5" alt="Friend story" class="w-full h-full object-cover rounded-full">
                             </div>
                         </div>
-                        <span class="text-xs truncate w-16 text-center">pedro</span>
+                        <span class="text-xs truncate w-16 text-center">josué</span>
                     </div>
 
-                    <div class="flex flex-col items-center space-y-1">
+                    <div class="c-white flex flex-col items-center space-y-1">
                         <div class="story-item relative">
-                            <div class="w-16 h-16 rounded-full bg-white p-0.5 flex items-center justify-center overflow-hidden">
+                            <div class="w-16 h-16 rounded-full bg-blue p-0.5 flex items-center justify-center overflow-hidden">
                                 <img src="https://picsum.photos/200/200?random=6" alt="Friend story" class="w-full h-full object-cover rounded-full">
                             </div>
                         </div>
-                        <span class="text-xs truncate w-16 text-center">julia</span>
+                        <span class="text-xs truncate w-16 text-center">marina</span>
                     </div>
+
+                    <div class="c-white flex flex-col items-center space-y-1">
+                        <div class="story-item relative">
+                            <div class="w-16 h-16 rounded-full bg-blue p-0.5 flex items-center justify-center overflow-hidden">
+                                <img src="https://picsum.photos/200/200?random=7" alt="Friend story" class="w-full h-full object-cover rounded-full">
+                            </div>
+                        </div>
+                        <span class="text-xs truncate w-16 text-center">cláudia</span>
+                    </div>
+
+                    <div class="c-white flex flex-col items-center space-y-1">
+                        <div class="story-item relative">
+                            <div class="w-16 h-16 rounded-full bg-blue p-0.5 flex items-center justify-center overflow-hidden">
+                                <img src="https://picsum.photos/200/200?random=8" alt="Friend story" class="w-full h-full object-cover rounded-full">
+                            </div>
+                        </div>
+                        <span class="text-xs truncate w-16 text-center">felipe</span>
+                    </div>
+
+                    <div class="c-white flex flex-col items-center space-y-1">
+                        <div class="story-item relative">
+                            <div class="w-16 h-16 rounded-full bg-blue p-0.5 flex items-center justify-center overflow-hidden">
+                                <img src="https://picsum.photos/200/200?random=9" alt="Friend story" class="w-full h-full object-cover rounded-full">
+                            </div>
+                        </div>
+                        <span class="text-xs truncate w-16 text-center">helena</span>
+                    </div>
+
+                    <div class="c-white flex flex-col items-center space-y-1">
+                        <div class="story-item relative">
+                            <div class="w-16 h-16 rounded-full bg-blue p-0.5 flex items-center justify-center overflow-hidden">
+                                <img src="https://picsum.photos/200/200?random=10" alt="Friend story" class="w-full h-full object-cover rounded-full">
+                            </div>
+                        </div>
+                        <span class="text-xs truncate w-16 text-center">melina</span>
+                    </div>
+
                 </div>
             </div>
 
@@ -318,15 +366,21 @@
                             <!-- Post actions -->
                             <div class="post-actions bg-black px-4 flex center">
                                 <div class="actions">
-                                    <button class="post-action like-btn text-2xl">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="post-action text-2xl">
-                                        <i class="far fa-comment"></i>
-                                    </button>
-                                    <button class="post-action text-2xl">
+                                    <div class="action-infos">
+                                        <button class="post-action like-btn text-2xl">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <p>152</p>
+                                    </div>
+                                    <div class="action-infos">
+                                        <button class="post-action text-2xl">
+                                            <i class="far fa-comment"></i>
+                                        </button>
+                                        <p>34</p>
+                                    </div>
+                                        <button class="post-action text-2xl">
                                         <i class="far fa-paper-plane"></i>
-                                    </button>
+                                        </button>
                                 <button class="post-action save-btn text-2xl">
                                     <i class="far fa-bookmark"></i>
                                 </button>
@@ -352,7 +406,7 @@
                                 </div>
                                 <!-- Time -->
                                 <div class="time">
-                                    <p class="pl-3 text-xs text-gray-500">2 h</p>
+                                    <p class="pl-3 text-xs text-gray-500">3 h</p>
                                 </div>
                                 <button class="text-gray-500 hover:text-gray-700">
                                     <i class="fas fa-ellipsis-h"></i>
@@ -366,14 +420,21 @@
                         </div>
                         <div>
                             <!-- Post actions -->
+                            <!-- Post actions -->
                             <div class="post-actions bg-black px-4 flex center">
                                 <div class="actions">
-                                    <button class="post-action like-btn text-2xl">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="post-action text-2xl">
-                                        <i class="far fa-comment"></i>
-                                    </button>
+                                    <div class="action-infos">
+                                        <button class="post-action like-btn text-2xl">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <p>200</p>
+                                    </div>
+                                    <div class="action-infos">
+                                        <button class="post-action text-2xl">
+                                            <i class="far fa-comment"></i>
+                                        </button>
+                                        <p>99</p>
+                                    </div>
                                     <button class="post-action text-2xl">
                                         <i class="far fa-paper-plane"></i>
                                     </button>
@@ -402,7 +463,7 @@
                                 </div>
                                 <!-- Time -->
                                 <div class="time">
-                                    <p class="pl-3 text-xs text-gray-500">2 h</p>
+                                    <p class="pl-3 text-xs text-gray-500">4 h</p>
                                 </div>
                                 <button class="text-gray-500 hover:text-gray-700">
                                     <i class="fas fa-ellipsis-h"></i>
@@ -418,12 +479,18 @@
                             <!-- Post actions -->
                             <div class="post-actions bg-black px-4 flex center">
                                 <div class="actions">
-                                    <button class="post-action like-btn text-2xl">
-                                        <i class="far fa-heart"></i>
-                                    </button>
-                                    <button class="post-action text-2xl">
-                                        <i class="far fa-comment"></i>
-                                    </button>
+                                    <div class="action-infos">
+                                        <button class="post-action like-btn text-2xl">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                        <p>1k</p>
+                                    </div>
+                                    <div class="action-infos">
+                                        <button class="post-action text-2xl">
+                                            <i class="far fa-comment"></i>
+                                        </button>
+                                        <p>300</p>
+                                    </div>
                                     <button class="post-action text-2xl">
                                         <i class="far fa-paper-plane"></i>
                                     </button>
@@ -456,14 +523,6 @@
                                         <span class="font-semibold">bernardo.reali</span>
                                         Isso aí, Fernando!
                                     </p>
-                                    <p class="text-sm">
-                                        <span class="font-semibold">bernardo.reali</span>
-                                        Isso aí, Fernando!
-                                    </p>
-                                    <p class="text-sm">
-                                        <span class="font-semibold">bernardo.reali</span>
-                                        Isso aí, Fernando!
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -485,8 +544,8 @@
                         <div class="post-right-infos">
                             <div class="px-4 pb-2">
                                 <p class="text-sm">
-                                    <span class="font-semibold">fernando.reinaldo</span>
-                                    Chegando o dia da formatura! 23/08 é logo ali! #formatura
+                                    <span class="font-semibold">bernardo.reali</span>
+                                    Muito feliz em avançar mais um semestre com nota máxima #projetos
                                 </p>
                             </div>
 
@@ -494,16 +553,8 @@
                             <div class="px-4 pb-2">
                                 <div class="post-comments">
                                     <p class="text-sm">
-                                        <span class="font-semibold">bernardo.reali</span>
-                                        Isso aí, Fernando!
-                                    </p>
-                                    <p class="text-sm">
-                                        <span class="font-semibold">bernardo.reali</span>
-                                        Isso aí, Fernando!
-                                    </p>
-                                    <p class="text-sm">
-                                        <span class="font-semibold">bernardo.reali</span>
-                                        Isso aí, Fernando!
+                                        <span class="font-semibold">fernando.reinaldo</span>
+                                        Parabéns, Bernardo!
                                     </p>
                                 </div>
                             </div>
@@ -527,7 +578,7 @@
                             <div class="px-4 pb-2">
                                 <p class="text-sm">
                                     <span class="font-semibold">fernando.reinaldo</span>
-                                    Chegando o dia da formatura! 23/08 é logo ali! #formatura
+                                    Mais um semestre sem alunos com GC #semestre
                                 </p>
                             </div>
 
@@ -536,16 +587,13 @@
                                 <div class="post-comments">
                                     <p class="text-sm">
                                         <span class="font-semibold">bernardo.reali</span>
-                                        Isso aí, Fernando!
+                                        Aí sim!
                                     </p>
                                     <p class="text-sm">
-                                        <span class="font-semibold">bernardo.reali</span>
-                                        Isso aí, Fernando!
+                                        <span class="font-semibold">fernando.reinaldo</span>
+                                        Muito bem!
                                     </p>
-                                    <p class="text-sm">
-                                        <span class="font-semibold">bernardo.reali</span>
-                                        Isso aí, Fernando!
-                                    </p>
+
                                 </div>
                             </div>
                         </div>
