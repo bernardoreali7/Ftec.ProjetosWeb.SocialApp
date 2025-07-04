@@ -13,34 +13,27 @@ namespace Ftec.ProjetosWeb.Social.Repositorio
             this._connectionString = connectionString;
         }
 
-        //public async Task<List<User>> ListarUsuariosComStorysRecentesAsync()
-        //{
-        //    var query = @"
-        //                    SELECT DISTINCT u.Id, u.nome, u.foto
-        //                    FROM User u
-        //                    JOIN Story s ON u.Id = s.idUsuario
-        //                    WHERE s.dataInclusao >= @dataLimite";
+        public List<Guid> ListarIdUsuariosStory()
+        {
+            var query = @" SELECT DISTINCT idUsuario
+                            FROM Story 
+                            WHERE s.dataInclusao >= @dataLimite";
 
-        //    var resultado = new List<User>();
+            var resultado = new List<Guid>();
 
-        //    using var conn = new NpgsqlConnection(_connectionString);
-        //    using var cmd = new NpgsqlCommand(query, conn);
-        //    cmd.Parameters.AddWithValue("@dataLimite", DateTime.UtcNow.AddHours(-24));
+            using var conn = new NpgsqlConnection(_connectionString);
+            using var cmd = new NpgsqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@dataLimite", DateTime.UtcNow.AddHours(-24));
 
-        //    await conn.OpenAsync();
-        //    using var reader = await cmd.ExecuteReaderAsync();
-        //    while (await reader.ReadAsync())
-        //    {
-        //        resultado.Add(new User
-        //        {
-        //            Id = reader.GetGuid(0),
-        //            nome = reader.IsDBNull(1) ? null : reader.GetString(1),
-        //            foto = reader.IsDBNull(2) ? null : reader.GetString(2)
-        //        });
-        //    }
+            conn.OpenAsync();
+            using var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                resultado.Add(reader.GetGuid(0));
+            }
 
-        //    return resultado;
-        //}
+            return resultado;
+        }
 
         public List<Story> ListarStorysUsuario(Guid idUsuario)
         {
