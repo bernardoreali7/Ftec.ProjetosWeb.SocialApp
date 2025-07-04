@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #1f1f1f;
             background-attachment: fixed;
         }
         .gradient-text {
@@ -21,24 +21,22 @@
             background-clip: text;
             color: transparent;
         }
+
         .input-focus:focus {
-            border-color: #3a7bd5;
-            box-shadow: 0 0 0 1px #3a7bd5;
+            border-color: grey;
+            box-shadow: 0 0 0 1px grey;
+            color: white;
         }
+
         .btn-primary {
-            background: linear-gradient(to right, #3a7bd5, #00d2ff);
-            transition: all 0.3s ease;
+            background: #000000;
         }
-        .btn-primary:hover {
-            background: linear-gradient(to right, #2c5fa8, #00a8cc);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+
         .login-box {
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             border-radius: 12px;
             backdrop-filter: blur(5px);
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: #3a7bd5;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .brand-logo {
@@ -55,6 +53,15 @@
             display: none;
             animation: fadeIn 0.5s ease-in-out;
         }
+        .c-black {
+            color:black;
+        }
+        .c-white {
+            color:white;
+        }
+        .border-dark{
+            border-color: #1f1f1f;
+        }
         @@keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -67,29 +74,28 @@
         <!-- Box de Recuperação de Senha -->
         <div class="login-box p-8 w-full">
             <div class="brand-logo mb-8">
-                <i class="fas fa-users"></i>
-                <h1 class="text-4xl font-bold gradient-text">FTEC Social</h1>
+                <h1 class="text-4xl font-bold">Space FTEC</h1>
             </div>
 
-            <h2 class="text-2xl font-semibold text-gray-800 mb-2">Recuperar sua senha</h2>
-            <p class="text-gray-600 mb-6">Digite seu email para receber as instruções de recuperação</p>
+            <h2 class="c-black text-2xl font-semibold mb-2">Redefinir sua senha</h2>
+            <p class="c-black mb-6">Caso exista uma conta vinculada a esse email, enviaremos as instruções</p>
 
             <!-- Formulário de Recuperação -->
             <form id="recoveryForm" class="space-y-4">
                 <div id="emailForm">
                     <!-- Campo de Email -->
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <label for="email" class="c-black block text-sm font-medium mb-1">Email</label>
                         <div class="relative">
-                            <input type="email" id="email" placeholder="Digite seu email cadastrado"
-                                   class="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm input-focus focus:outline-none pl-10" required>
+                            <input type="email" id="email" placeholder="Email"
+                                   class="bg-black c-white w-full px-4 py-3 border border-dark rounded-lg text-sm input-focus focus:outline-none pl-10" required>
                             <i class="fas fa-envelope absolute left-3 top-3.5 text-gray-400"></i>
                         </div>
                     </div>
 
                     <button type="submit"
                             class="w-full py-2.5 px-4 rounded-lg text-white font-semibold btn-primary mt-4">
-                        Enviar Instruções
+                        Enviar
                     </button>
                 </div>
 
@@ -105,14 +111,13 @@
                     </a>
                 </div>
             </form>
+            <div class="login-box-2 mt-4 p-6 text-center">
+                <p class="text-sm text-gray-600">
+                    <a href="/home/login" class="c-black font-semibold">Faça login</a>
+                </p>
+            </div>
         </div>
 
-        <!-- Link para login -->
-        <div class="login-box mt-4 p-6 text-center">
-            <p class="text-sm text-gray-600">
-                Lembrou sua senha? <a href="/home/login" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">Faça login</a>
-            </p>
-        </div>
     </div>
 
     <script>
