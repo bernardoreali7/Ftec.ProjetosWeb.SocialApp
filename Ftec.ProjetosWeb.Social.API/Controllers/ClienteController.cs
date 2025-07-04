@@ -16,7 +16,7 @@ namespace Ftec.ProjetosWeb.Social.API.Controllers
         private StoryAplicacao aplicacao;
         public StoryController()
         {
-            string strConexao = "Server=localhost;Port=5432;Database=postgres;Username=postgres;Password=422077bmx;";
+            string strConexao = "Server=191.242.230.255;Port=5432;Database=postgres;Username=postgres;Password=12345678;";
             storyRepository = new StoryRepositorio(strConexao);
             aplicacao = new StoryAplicacao(storyRepository);
         }
@@ -27,10 +27,18 @@ namespace Ftec.ProjetosWeb.Social.API.Controllers
             return aplicacao.PesquisarStorys(idUsuario);
         }
 
-        [HttpPost]
-        public void Post(Guid idUsuario, string foto)
+
+        [HttpGet]
+        [Route("ListarIdUsuariosStory")]
+        public List<Guid> ListarIdUsuariosStory()
         {
-            aplicacao.Inserir(idUsuario, foto);
+            return aplicacao.ListarIdUsuariosStory();
+        }
+
+        [HttpPost]
+        public void Post(Guid idUsuario, string fotoBase64)
+        {
+            aplicacao.Inserir(idUsuario, fotoBase64);
         }
 
         [HttpDelete]    

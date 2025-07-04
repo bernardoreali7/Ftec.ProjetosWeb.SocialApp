@@ -13,11 +13,10 @@ namespace Ftec.ProjetosWeb.Social.Aplicacao
             this._storyRepository = storyRepository;
         }
 
-        //public async List<UsuarioViewDto> PesquisarUsuariosComStoryRecente()
-        //{
-        //    var usuarios = await _storyRepository.ListarUsuariosComStorysRecentesAsync();
-        //    return UsuarioAdapter.ParaDto(usuarios);
-        //}
+        public List<Guid> ListarIdUsuariosStory()
+        {
+            return _storyRepository.ListarIdUsuariosStory();
+        }
 
         public List<StoryViewDto> PesquisarStorys(Guid idUsuario)
         {
