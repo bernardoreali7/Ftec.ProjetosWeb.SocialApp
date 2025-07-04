@@ -1,16 +1,12 @@
-﻿using Ftec.ProjetosWeb.Social;
-using Ftec.ProjetosWeb.Social.Aplicacao;
+﻿using Ftec.ProjetosWeb.Social.Aplicacao;
 using Ftec.ProjetosWeb.Social.Aplicacao.DTO;
 using Ftec.ProjetosWeb.Social.Dominio.Repositorio;
 using Ftec.ProjetosWeb.Social.Repositorio;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Ftec.ProjetosWeb.Social.API.Controllers
 {
-    [Route("api/[controller]/{id?}")]
+    [Route("api/[controller]")]
     [ApiController]
     public class StoryController : ControllerBase
     {
