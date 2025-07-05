@@ -13,14 +13,21 @@ namespace Ftec.ProjetosWeb.Social.Aplicacao
             this._storyRepository = storyRepository;
         }
 
+
+        public List<StoryViewDto> ListarStorys()
+        {
+            var storys = _storyRepository.ListarStorys();
+            return StoryAdapter.ParaDto(storys);
+        }
+
         public List<Guid> ListarIdUsuariosStory()
         {
             return _storyRepository.ListarIdUsuariosStory();
         }
 
-        public List<StoryViewDto> PesquisarStorys(Guid idUsuario)
+        public List<StoryViewDto> ListarStorysByUsuario(Guid idUsuario)
         {
-            var storys = _storyRepository.ListarStorysUsuario(idUsuario);
+            var storys = _storyRepository.ListarStorys(idUsuario);
             return StoryAdapter.ParaDto(storys);
         }
 
@@ -33,5 +40,6 @@ namespace Ftec.ProjetosWeb.Social.Aplicacao
         {
             _storyRepository.DeleteStoryAsync(idStory);
         }
+
     }
 }

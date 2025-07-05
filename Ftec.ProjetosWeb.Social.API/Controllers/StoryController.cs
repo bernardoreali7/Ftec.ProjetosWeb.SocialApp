@@ -20,23 +20,30 @@ namespace Ftec.ProjetosWeb.Social.API.Controllers
         }
 
         [HttpGet]
-        public List<StoryViewDto> Get(Guid idUsuario)
+        public List<StoryViewDto> Get()
         {
-            return aplicacao.PesquisarStorys(idUsuario);
+            return aplicacao.ListarStorys();
+        }
+
+        [HttpGet]
+        [Route("ListarStorysByUsuario")]
+        public List<StoryViewDto> ListarStorysByUsuario(Guid idUsuario)
+        {
+            return aplicacao.ListarStorysByUsuario(idUsuario);
         }
 
 
         [HttpGet]
-        [Route("ListarIdUsuariosStory")]
+        [Route("ListarIdUsuariosComStory")]
         public List<Guid> ListarIdUsuariosStory()
         {
             return aplicacao.ListarIdUsuariosStory();
         }
 
         [HttpPost]
-        public void Post(Guid idUsuario, string fotoBase64)
+        public void Post([FromBody] PostStoryDto model)
         {
-            aplicacao.Inserir(idUsuario, fotoBase64);
+            aplicacao.Inserir(model.idUsuario, model.fotoBase64);
         }
 
         [HttpDelete]

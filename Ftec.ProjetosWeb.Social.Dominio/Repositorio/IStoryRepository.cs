@@ -7,6 +7,6 @@ namespace Ftec.ProjetosWeb.Social.Dominio.Repositorio
         void PostStoryAsync(Guid idUsuario, string imagemBase64);
         void DeleteStoryAsync(Guid storyId);
         List<Guid> ListarIdUsuariosStory();
-        List<Story> ListarStorysUsuario(Guid idUsuario);
+        List<Story> ListarStorys(Guid? idUsuario = null);
     }
 }

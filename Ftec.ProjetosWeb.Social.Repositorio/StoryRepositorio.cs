@@ -1,7 +1,6 @@
 ﻿using Ftec.ProjetosWeb.Social.Dominio.Entidades;
 using Ftec.ProjetosWeb.Social.Dominio.Repositorio;
 using Npgsql;
-using Microsoft.Extensions.Configuration;
 
 namespace Ftec.ProjetosWeb.Social.Repositorio
 {
@@ -35,17 +34,22 @@ namespace Ftec.ProjetosWeb.Social.Repositorio
             return resultado;
         }
 
-        public List<Story> ListarStorysUsuario(Guid idUsuario)
+        public List<Story> ListarStorys(Guid? idUsuario = null)
         {
-            var query = @"SELECT Id, idUsuario, dataInclusao, imagem
+            string sWhereUsuario = idUsuario != null ? " and idUsuario = @idUsuario " : string.Empty;
+            var query = $@"SELECT Id, idUsuario, dataInclusao, imagem
                   FROM Story
-                  WHERE idUsuario = @idUsuario AND dataInclusao >= @dataLimite
+                  WHERE 1=1
+                  {sWhereUsuario}
+                  AND dataInclusao >= @dataLimite
                   ORDER BY dataInclusao ASC";
 
             var stories = new List<Story>();
             using var conn = new NpgsqlConnection(_connectionString);
             using var cmd = new NpgsqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+            if (idUsuario != null)
+                cmd.Parameters.AddWithValue("@idUsuario", idUsuario.Value);
+            
             cmd.Parameters.AddWithValue("@dataLimite", DateTime.UtcNow.AddHours(-24));
 
             conn.Open();
